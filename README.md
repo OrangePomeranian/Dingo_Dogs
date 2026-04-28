@@ -1,18 +1,28 @@
 # Genomic-Analysis-of-Founder-Effects-and-Bottleneck-Events-in-Dingo-Dogs
-Production-grade web dashboard for inspecting and validating an end-to-end WGS variant calling pipeline.
+Production-grade implementation of an end-to-end Whole Genome Sequencing (WGS) variant calling pipeline, coupled with a full-stack analytical dashboard for inspection, validation, and interpretability of results.
 
-The application provides a structured visualization layer over the full workflow — from raw data acquisition to final variant annotation — exposing pipeline state, intermediate outputs, and key metrics at each stage. It includes detailed step-by-step execution traces, tool configurations, and output artifacts, enabling reproducibility and auditability of the analysis.
+The backend pipeline orchestrates all stages of genomic data processing — from raw FASTQ acquisition to final annotated variants — using modular, reproducible Bash workflows coordinated via a master execution script . It includes data download and QC, read trimming, reference genome preparation, alignment, and dual variant calling using both GATK HaplotypeCaller (GVCF workflow) and BCFtools mpileup/call , followed by merging, filtering, annotation with SnpEff , and cross-tool comparison.
 
-Core features:
+The pipeline is designed with explicit intermediate outputs, validation checkpoints, and structured result directories, ensuring reproducibility, traceability, and ease of debugging across all stages (QC, alignment, variant calling, filtering, annotation, and post-processing).
 
-Aggregated pipeline metrics (reads, variants, filtering impact)
-Full pipeline trace with stage-level outputs and parameters
-Side-by-side comparison of GATK HaplotypeCaller vs BCFtools (counts, overlap, distribution)
-Variant filtering funnel and chromosome-level distributions
-Annotation summary with SnpEff integration
-Centralized view of all tools, versions, and configurations used
-Embedded LLM assistant for contextual querying over pipeline results
+On top of this, the project delivers a production-grade web dashboard that acts as a visualization and validation layer over the pipeline. It exposes pipeline state, execution trace, parameters, and outputs in a structured and interactive format, enabling both technical and biological inspection.
 
+Core capabilities:
+
+End-to-end automated WGS pipeline with modular Bash scripts and deterministic execution flow
+Dual variant calling strategy (GATK vs BCFtools) with downstream harmonization and comparison
+Variant filtering pipeline (missingness, SNP selection, LD pruning) and functional annotation (SnpEff)
+Post-processing layer for contig normalization and chromosome mapping
+Full observability of pipeline stages, inputs/outputs, and tool configurations
+Interactive dashboard with:
+Aggregated metrics (reads, variants, filtering impact)
+Step-by-step execution trace with artifacts and parameters
+Side-by-side comparison of variant callers (counts, overlap, distributions)
+Variant filtering funnel and chromosome-level visualizations
+Annotation summaries and consistency checks
+Embedded LLM assistant enabling contextual querying over pipeline outputs and results
+
+This project bridges raw bioinformatics execution with a modern data engineering and analytics layer, providing a reproducible, inspectable, and explainable environment for genomic variant analysis.
 ___
 Designed as a thin visualization and interpretation layer on top of bioinformatics workflows, with emphasis on transparency, comparability, and debugging of variant calling pipelines.
 

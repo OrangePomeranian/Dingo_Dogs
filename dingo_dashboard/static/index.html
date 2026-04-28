@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dingo Genomic Analysis Dashboard</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="sidebar__logo">
+      <div class="sidebar__logo-icon">🐕</div>
+      <div class="sidebar__logo-text">
+        <h1>Dingo Genomics</h1>
+        <p>WGS Analysis Dashboard</p>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav" id="sidebar-nav">
+      <!-- Built by app.js -->
+    </nav>
+
+    <div class="sidebar__footer">
+      <div style="margin-bottom:6px;">
+        <span class="badge badge--green" style="font-size:.65rem;">● Pipeline Complete</span>
+      </div>
+      <div>Samples: SRR25817557 · SRR25817558</div>
+      <div>Reference: GCF_003254725.2</div>
+      <div style="margin-top:6px;color:var(--clr-text-muted);">GATK 4.4 · BCFtools · SnpEff</div>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main">
+
+    <!-- Page header -->
+    <header class="page-header">
+      <div>
+        <div class="page-header__title" id="page-title">Dashboard</div>
+        <div class="page-header__sub"   id="page-subtitle">Dingo WGS Analysis</div>
+      </div>
+      <div class="page-header__actions">
+        <span class="badge badge--cyan" style="font-size:.72rem;">🧬 Canis lupus dingo</span>
+        <span class="badge badge--muted" style="font-size:.72rem;">Dec 2024</span>
+      </div>
+    </header>
+
+    <!-- Page content — rendered by JS -->
+    <div class="page-body" id="page-content">
+      <div class="empty-state">
+        <div class="spinner" style="width:36px;height:36px;border-width:3px;"></div>
+        <div style="margin-top:16px;">Loading dashboard…</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!--
+  Scripts loaded at end of <body> — DOM is already fully parsed here,
+  so no defer/DOMContentLoaded needed. Order matters: data → charts → pages → app.
+-->
+<script src="/static/js/vendor/chart.min.js"></script>
+<script src="/static/js/data.js"></script>
+<script src="/static/js/charts.js"></script>
+<script src="/static/js/pages/dashboard.js"></script>
+<script src="/static/js/pages/parameters.js"></script>
+<script src="/static/js/pages/steps.js"></script>
+<script src="/static/js/pages/comparison.js"></script>
+<script src="/static/js/pages/annotation.js"></script>
+<script src="/static/js/pages/pipeline.js"></script>
+<script src="/static/js/pages/assistant.js"></script>
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>

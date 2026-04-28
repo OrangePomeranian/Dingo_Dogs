@@ -9,18 +9,18 @@ On top of this, the project delivers a production-grade web dashboard that acts 
 
 Core capabilities:
 
-End-to-end automated WGS pipeline with modular Bash scripts and deterministic execution flow
-Dual variant calling strategy (GATK vs BCFtools) with downstream harmonization and comparison
-Variant filtering pipeline (missingness, SNP selection, LD pruning) and functional annotation (SnpEff)
-Post-processing layer for contig normalization and chromosome mapping
-Full observability of pipeline stages, inputs/outputs, and tool configurations
-Interactive dashboard with:
-Aggregated metrics (reads, variants, filtering impact)
-Step-by-step execution trace with artifacts and parameters
-Side-by-side comparison of variant callers (counts, overlap, distributions)
-Variant filtering funnel and chromosome-level visualizations
-Annotation summaries and consistency checks
-Embedded LLM assistant enabling contextual querying over pipeline outputs and results
+- End-to-end automated WGS pipeline with modular Bash scripts and deterministic execution flow  
+- Dual variant calling strategy (GATK vs BCFtools) with downstream harmonization and comparison  
+- Variant filtering pipeline (missingness, SNP selection, LD pruning) and functional annotation (SnpEff)  
+- Post-processing layer for contig normalization and chromosome mapping  
+- Full observability of pipeline stages, inputs/outputs, and tool configurations  
+- Interactive dashboard with:
+  - Aggregated metrics (reads, variants, filtering impact)  
+  - Step-by-step execution trace with artifacts and parameters  
+  - Side-by-side comparison of variant callers (counts, overlap, distributions)  
+  - Variant filtering funnel and chromosome-level visualizations  
+  - Annotation summaries and consistency checks  
+- Embedded LLM assistant enabling contextual querying over pipeline outputs and results  
 
 This project bridges raw bioinformatics execution with a modern data engineering and analytics layer, providing a reproducible, inspectable, and explainable environment for genomic variant analysis.
 ___

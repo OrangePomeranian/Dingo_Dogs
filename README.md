@@ -1,7 +1,7 @@
 # Genomic-Analysis-of-Founder-Effects-and-Bottleneck-Events-in-Dingo-Dogs
 <p align = "center">
   <img width="150" height="150" alt="5cdddc32-5986-4718-a5e6-da980c562eaa" src="https://github.com/user-attachments/assets/bb8cdbd9-e15e-4584-ba30-91bfac799118" />
-</p>>
+</p>
 
 Production-grade implementation of an end-to-end Whole Genome Sequencing (WGS) variant calling pipeline, coupled with a full-stack analytical dashboard for inspection, validation, and interpretability of results.
 

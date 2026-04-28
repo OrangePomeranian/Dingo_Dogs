@@ -1,4 +1,7 @@
 # Genomic-Analysis-of-Founder-Effects-and-Bottleneck-Events-in-Dingo-Dogs
+
+<img width="1254" height="1254" alt="5cdddc32-5986-4718-a5e6-da980c562eaa" src="https://github.com/user-attachments/assets/bb8cdbd9-e15e-4584-ba30-91bfac799118" />
+
 Production-grade implementation of an end-to-end Whole Genome Sequencing (WGS) variant calling pipeline, coupled with a full-stack analytical dashboard for inspection, validation, and interpretability of results.
 
 The backend pipeline orchestrates all stages of genomic data processing — from raw FASTQ acquisition to final annotated variants — using modular, reproducible Bash workflows coordinated via a master execution script . It includes data download and QC, read trimming, reference genome preparation, alignment, and dual variant calling using both GATK HaplotypeCaller (GVCF workflow) and BCFtools mpileup/call , followed by merging, filtering, annotation with SnpEff , and cross-tool comparison.

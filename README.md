@@ -20,7 +20,7 @@ Main dashboard view of a Dingo WGS analysis pipeline, showing high-level pipelin
 
 Includes variant counts (GATK vs BCFtools), filtering funnel, pipeline stage progression, and quick access to detailed results and analyses.
 <img width="1856" height="1133" alt="image" src="https://github.com/user-attachments/assets/518da887-cde1-49f5-83b8-7fc23609c193" />
-
+___
 Detailed pipeline configuration and execution view, showing all tools used (with versions and roles) and a step-by-step breakdown of the workflow.
 
 Includes preprocessing, alignment, variant calling, filtering, and annotation stages, with parameters, scripts, and generated outputs for each step—enabling full transparency and reproducibility of the analysis.
